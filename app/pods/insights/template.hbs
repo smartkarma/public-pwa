@@ -1,1 +1,17 @@
-{{sk-insights-page}}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      {{#each model as |insight|}}
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              {{insight.tagline}}
+            </h2>
+          </a>
+          <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on {{moment-format insight.publishedAt "lll"}}</p>
+        </div>
+        <br>
+      {{/each}}
+    </div>
+  </div>
+</div>
