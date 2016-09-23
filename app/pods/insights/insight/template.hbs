@@ -1,28 +1,34 @@
+<header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="post-heading">
+        <h1>{{model.tagline}}</h1>
+        <span class="meta">Posted by
+        {{#link-to "profile" model.account.slug}}
+          {{model.account.name}}
+        {{/link-to}}
+        on {{moment-format model.puplishedAt 'll'}}</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</header>
 <article>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <h2>{{model.tagline}}</h2>
-        <p class="post-meta">Posted by
-          {{#link-to "profile" model.account.slug}}
-            {{model.account.name}}
-          {{/link-to}}
-          on {{moment-format insight.publishedAt "lll"}}
-        </p>
-        <section>
-          <h4>Executive Summary</h4>
-          <p>
-            {{{model.executiveSummary}}}
-          </p>
-        </section>
+        <h2 class="section-heading">Executive Summary</h2>
+
+        {{{model.executiveSummary}}}
+
         {{#if model.detail}}
-          <section>
-            <h4>Detail</h4>
-            <p>
-              {{{model.detail}}}
-            </p>
-          </section>
+          <h2 class="section-heading">Detail</h2>
+
+          {{{model.detail}}}
         {{/if}}
+
+        <p>Photographs by <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
       </div>
     </div>
   </div>

@@ -1,21 +1,35 @@
+<header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>Smartkarma</h1>
+          <hr class="small">
+          <span class="subheading">Progressive Web App Experiment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-      {{#each model as |insight|}}
-        <div>
-          {{#link-to "insights.insight" insight}}
-            <h2 class="post-title">
-              {{insight.tagline}}
-            </h2>
-          {{/link-to}}
-          <p class="post-meta">Posted by
-          {{#link-to "profile" insight.account.slug}}
-            {{insight.account.name}}
-          {{/link-to}}
-          on {{moment-format insight.publishedAt "lll"}}</p>
-        </div>
-        <br>
-      {{/each}}
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    {{#each model as |insight|}}
+    <div class="post-preview">
+      {{#link-to "insights.insight" insight}}
+      <h2 class="post-title">
+        {{insight.tagline}}
+      </h2>
+      {{/link-to}}
+      <p class="post-meta">Posted by
+      {{#link-to "profile" insight.account.slug}}
+      {{insight.account.name}}
+      {{/link-to}}
+      on {{moment-format insight.publishedAt "lll"}}</p>
     </div>
+    <hr>
+    {{/each}}
+  </div>
   </div>
 </div>
