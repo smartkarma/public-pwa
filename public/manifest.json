@@ -1,0 +1,17 @@
+{
+  "name": "Smartkarma Public Insight",
+  "short_name": "Smartkarma Insights",
+  "theme_color": "#279fc4",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "https://assets.smartkarma.com/v2/img/apple-touch-icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
