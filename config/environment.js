@@ -7,6 +7,22 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    serviceWorker: {
+      enabled: true,
+      debug: true,
+      serviceWorkerFile: 'offline-support.js',
+      includeRegistration: false,
+      excludePaths: ['robots.txt'],
+      precacheURLs: [
+        "/index.html",
+      ],
+      fallback: [
+        "/(.*) /index.html",
+      ],
+      networkFirstURLs: [
+        '/api/v2/insights'
+      ]
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
