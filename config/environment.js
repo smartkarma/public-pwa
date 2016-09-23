@@ -3,6 +3,7 @@
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'sk-public-insight',
+    podModulePrefix: 'sk-public-insight/pods',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
