@@ -11,7 +11,7 @@ export default DS.Model.extend({
   countries:          DS.attr(),
   sectors:            DS.attr(),
 
-  contentVerticals:   DS.hasMany('content-vertical'),
-  account:            DS.belongsTo('account'),
-  primaryEntity:      DS.belongsTo('entity'),
+  contentVerticals:   DS.hasMany('content-vertical', {aync: true}),
+  account:            DS.belongsTo('account', {async: true}),
+  primaryEntity:      DS.belongsTo('entity', {aync: true}),
 });

@@ -8,7 +8,11 @@
               {{insight.tagline}}
             </h2>
           </a>
-          <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on {{moment-format insight.publishedAt "lll"}}</p>
+          <p class="post-meta">Posted by
+          {{#link-to "profile" insight.account.slug}}
+            {{insight.account.name}}
+          {{/link-to}}
+          on {{moment-format insight.publishedAt "lll"}}</p>
         </div>
         <br>
       {{/each}}

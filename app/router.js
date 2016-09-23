@@ -8,6 +8,8 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('insights', {path: ''});
+  this.route('profile', {path: 'profiles/:slug'});
+  this.route('entity', {path: 'entities/:slug'});
 });
 
 export default Router;
