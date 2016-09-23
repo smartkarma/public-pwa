@@ -1,0 +1,29 @@
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <h2>{{model.tagline}}</h2>
+        <p class="post-meta">Posted by
+          {{#link-to "profile" model.account.slug}}
+            {{model.account.name}}
+          {{/link-to}}
+          on {{moment-format insight.publishedAt "lll"}}
+        </p>
+        <section>
+          <h4>Executive Summary</h4>
+          <p>
+            {{{model.executiveSummary}}}
+          </p>
+        </section>
+        {{#if model.detail}}
+          <section>
+            <h4>Detail</h4>
+            <p>
+              {{{model.detail}}}
+            </p>
+          </section>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</article>
