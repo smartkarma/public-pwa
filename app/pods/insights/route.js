@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     return this.get('store').query('insight', {
       'page[size]': 10,
       'page[number]': 1,
+      include: 'content-verticals,primary-entity,account',
     });
   },
 });
